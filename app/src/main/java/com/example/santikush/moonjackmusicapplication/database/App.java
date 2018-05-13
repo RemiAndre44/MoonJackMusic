@@ -1,6 +1,7 @@
 package com.example.santikush.moonjackmusicapplication.database;
 
 import android.app.Application;
+import android.arch.persistence.room.Room;
 
 public class App extends Application {
 
@@ -24,7 +25,7 @@ public class App extends Application {
         // fallbackToDestructiveMigration and new Seed().execute()
         // need to be commented once in production :3
         database = Room
-                .databaseBuilder(getApplicationContext(), LokaCarDB.class, LokaCarDB.DATABASE_NAME)
+                .databaseBuilder(getApplicationContext(), MoonJackDB.class, MoonJackDB.DATABASE_NAME)
                 .fallbackToDestructiveMigration()
                 .build();
         new Seed().execute();

@@ -1,8 +1,9 @@
 package com.example.santikush.moonjackmusicapplication.database.dao;
 
-//@Entity
-public class Track {
+import android.arch.persistence.room.Dao;
 
+@Dao
+public interface TrackDAO {
 
 
 }
