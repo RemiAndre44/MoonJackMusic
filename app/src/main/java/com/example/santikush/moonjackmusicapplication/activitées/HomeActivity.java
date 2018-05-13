@@ -1,9 +1,10 @@
-package com.example.santikush.moonjackmusicapplication;
+package com.example.santikush.moonjackmusicapplication.activitées;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class HomeActivity extends AppCompatActivity {
+import com.example.santikush.moonjackmusicapplication.R;
+
+public class HomeActivity extends ActivityMenu {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
