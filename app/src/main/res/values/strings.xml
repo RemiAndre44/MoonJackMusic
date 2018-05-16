@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MoonJackMusic</string>
+    <string name="livre_d_or">Livre d\'or</string>
+    <string name="a_venir">A venir</string>
 </resources>
