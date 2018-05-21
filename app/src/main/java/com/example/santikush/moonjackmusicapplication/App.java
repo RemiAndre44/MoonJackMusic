@@ -1,7 +1,11 @@
-package com.example.santikush.moonjackmusicapplication.database;
+package com.example.santikush.moonjackmusicapplication;
 
 import android.app.Application;
 import android.arch.persistence.room.Room;
+import android.util.Log;
+
+import com.example.santikush.moonjackmusicapplication.database.MoonJackDB;
+import com.example.santikush.moonjackmusicapplication.database.Seed;
 
 public class App extends Application {
 
@@ -28,6 +32,7 @@ public class App extends Application {
                 .databaseBuilder(getApplicationContext(), MoonJackDB.class, MoonJackDB.DATABASE_NAME)
                 .fallbackToDestructiveMigration()
                 .build();
+        Log.d("salut","salut");
         new Seed().execute();
 
         instance = this;

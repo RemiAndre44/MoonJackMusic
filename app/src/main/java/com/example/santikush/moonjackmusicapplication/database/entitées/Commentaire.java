@@ -21,15 +21,6 @@ public class Commentaire implements Parcelable{
     @TypeConverters({DateTypeConverter.class})
     private Date dateCommentaire;
 
-    public Commentaire(int id_commentaire, String contenu, int id_user, Date dateCommentaire) {
-        this.id_commentaire = id_commentaire;
-        this.contenu = contenu;
-        this.id_user = id_user;
-        this.dateCommentaire = dateCommentaire;
-    }
-
-    public Commentaire() {
-    }
 
     protected Commentaire(Parcel in) {
         id_commentaire = in.readInt();
@@ -48,6 +39,10 @@ public class Commentaire implements Parcelable{
             return new Commentaire[size];
         }
     };
+
+    public Commentaire(){
+
+    }
 
     public int getId_commentaire() {
         return id_commentaire;
@@ -91,5 +86,15 @@ public class Commentaire implements Parcelable{
         dest.writeInt(id_commentaire);
         dest.writeString(contenu);
         dest.writeInt(id_user);
+    }
+
+    @Override
+    public String toString() {
+        return "Commentaire{" +
+                "id_commentaire=" + id_commentaire +
+                ", contenu='" + contenu + '\'' +
+                ", id_user=" + id_user +
+                ", dateCommentaire=" + dateCommentaire +
+                '}';
     }
 }

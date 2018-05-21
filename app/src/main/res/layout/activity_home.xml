@@ -16,9 +16,9 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="150dp"
             android:id="@+id/trackListe"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="30dp"
             android:drawableTop="@drawable/calendrier"
             android:background="@drawable/btnhome"
             android:layout_weight="0.5"
@@ -26,13 +26,14 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="150dp"
             android:id="@+id/video"
-            android:layout_marginRight="50dp"
+            android:layout_marginRight="30dp"
             android:drawableTop="@drawable/vinyle"
             android:background="@drawable/btnhome"
             android:layout_weight="0.5"
-            android:text="TrackListe"/>
+            android:text="TrackList"
+            android:onClick="onTrackClic"/>
 
     </LinearLayout>
 
@@ -43,9 +44,9 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="150dp"
             android:id="@+id/bio"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="30dp"
             android:drawableTop="@drawable/equalizer"
             android:background="@drawable/btnhome"
             android:layout_weight="0.5"
@@ -53,9 +54,9 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="150dp"
             android:id="@+id/livreDor"
-            android:layout_marginRight="50dp"
+            android:layout_marginRight="30dp"
             android:drawableTop="@drawable/stylo"
             android:background="@drawable/btnhome"
             android:layout_weight="0.5"

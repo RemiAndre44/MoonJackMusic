@@ -13,14 +13,6 @@ public class User implements Parcelable{
 
     private String pseudo;
 
-    public User(int id_user, String pseudo) {
-        this.id_user = id_user;
-        this.pseudo = pseudo;
-    }
-
-    public User() {
-    }
-
     protected User(Parcel in) {
         id_user = in.readInt();
         pseudo = in.readString();
@@ -37,6 +29,10 @@ public class User implements Parcelable{
             return new User[size];
         }
     };
+
+    public User(){
+
+    }
 
     public int getId_user() {
         return id_user;
@@ -63,5 +59,13 @@ public class User implements Parcelable{
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(id_user);
         dest.writeString(pseudo);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id_user=" + id_user +
+                ", pseudo='" + pseudo + '\'' +
+                '}';
     }
 }

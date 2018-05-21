@@ -16,16 +16,6 @@ public class Track implements Parcelable{
     private String titre;
     private double duree;
 
-    public Track() {
-    }
-
-    public Track(int id_track, String artiste, String album, String titre, double duree) {
-        this.id_track = id_track;
-        this.artiste = artiste;
-        this.album = album;
-        this.titre = titre;
-        this.duree = duree;
-    }
 
     protected Track(Parcel in) {
         id_track = in.readInt();
@@ -46,6 +36,10 @@ public class Track implements Parcelable{
             return new Track[size];
         }
     };
+
+    public Track(){
+
+    }
 
     public void setId_track(int id_track) {
         this.id_track = id_track;
@@ -99,5 +93,16 @@ public class Track implements Parcelable{
         dest.writeString(album);
         dest.writeString(titre);
         dest.writeDouble(duree);
+    }
+
+    @Override
+    public String toString() {
+        return "Track{" +
+                "id_track=" + id_track +
+                ", artiste='" + artiste + '\'' +
+                ", album='" + album + '\'' +
+                ", titre='" + titre + '\'' +
+                ", duree=" + duree +
+                '}';
     }
 }
